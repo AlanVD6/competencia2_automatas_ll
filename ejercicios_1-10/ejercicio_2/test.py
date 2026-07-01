@@ -3,8 +3,12 @@
 
 from antlr4 import*
 from restaLexer import restaLexer
+import sys 
 
-lexer = restaLexer(InputStream(input("?")))
+#leer archivos
+input_stream=FileStream(sys.argv[1])
+
+lexer = restaLexer(input_stream)
 tokens = CommonTokenStream(lexer)
 tokens.fill()
 
