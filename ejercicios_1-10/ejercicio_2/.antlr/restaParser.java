@@ -1,4 +1,4 @@
-// Generated from d:/Automatas_Practicas/competencia2/ejercicios_1-10/ejercicio_1/suma.g4 by ANTLR 4.13.1
+// Generated from d:/Automatas_Practicas/competencia2/ejercicios_1-10/ejercicio_2/resta.g4 by ANTLR 4.13.1
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -9,14 +9,14 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
-public class sumaParser extends Parser {
+public class restaParser extends Parser {
 	static { RuntimeMetaData.checkVersion("4.13.1", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		NUM=1, MAS=2, WS=3;
+		NUM=1, MENOS=2, WS=3;
 	public static final int
 		RULE_root = 0, RULE_expr = 1;
 	private static String[] makeRuleNames() {
@@ -28,13 +28,13 @@ public class sumaParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, null, "'+'"
+			null, null, "'-'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, "NUM", "MAS", "WS"
+			null, "NUM", "MENOS", "WS"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -72,7 +72,7 @@ public class sumaParser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "suma.g4"; }
+	public String getGrammarFileName() { return "resta.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -83,7 +83,7 @@ public class sumaParser extends Parser {
 	@Override
 	public ATN getATN() { return _ATN; }
 
-	public sumaParser(TokenStream input) {
+	public restaParser(TokenStream input) {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
@@ -93,7 +93,7 @@ public class sumaParser extends Parser {
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
 		}
-		public TerminalNode EOF() { return getToken(sumaParser.EOF, 0); }
+		public TerminalNode EOF() { return getToken(restaParser.EOF, 0); }
 		public RootContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -125,7 +125,7 @@ public class sumaParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class ExprContext extends ParserRuleContext {
-		public TerminalNode EOF() { return getToken(sumaParser.EOF, 0); }
+		public TerminalNode EOF() { return getToken(restaParser.EOF, 0); }
 		public ExprContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}

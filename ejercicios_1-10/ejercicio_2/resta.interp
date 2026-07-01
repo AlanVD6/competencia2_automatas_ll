@@ -1,13 +1,13 @@
 token literal names:
 null
 null
-'+'
+'-'
 null
 
 token symbolic names:
 null
 NUM
-MAS
+MENOS
 WS
 
 rule names:
