@@ -16,7 +16,7 @@ public class ExprParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		INT=1, ID=2, IGUAL=3, NUM=4, WS=5;
+		NUM=1, MAS=2, POR=3, WS=4;
 	public static final int
 		RULE_root = 0, RULE_expr = 1;
 	private static String[] makeRuleNames() {
@@ -28,13 +28,13 @@ public class ExprParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'int'", null, "'='"
+			null, null, "'+'", "'*'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, "INT", "ID", "IGUAL", "NUM", "WS"
+			null, "NUM", "MAS", "POR", "WS"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -154,7 +154,7 @@ public class ExprParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001\u0005\n\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0001"+
+		"\u0004\u0001\u0004\n\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0001"+
 		"\u0000\u0001\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0001\u0001\u0000"+
 		"\u0000\u0002\u0000\u0002\u0000\u0000\u0007\u0000\u0004\u0001\u0000\u0000"+
 		"\u0000\u0002\u0007\u0001\u0000\u0000\u0000\u0004\u0005\u0003\u0002\u0001"+
