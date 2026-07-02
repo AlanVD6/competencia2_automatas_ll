@@ -8,8 +8,8 @@ null
 token symbolic names:
 null
 NUM
-MAS
-POR
+SUMA
+MULTIPLICACION
 WS
 
 rule names:

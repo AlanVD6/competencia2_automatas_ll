@@ -7,6 +7,6 @@ root : expr EOF;
 expr : EOF;
 
 NUM : [0-9]+;
-MAS : '+';
-POR : '*';
+SUMA : '+';
+MULTIPLICACION : '*';
 WS : [ \t\r\n]+ -> skip;

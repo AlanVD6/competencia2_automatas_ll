@@ -3,8 +3,11 @@
 
 from antlr4 import *
 from ExprLexer import ExprLexer
+import sys
 
-lexer = ExprLexer(InputStream(input("? ")))
+input_Stream = FileStream(sys.argv[1])
+
+lexer = ExprLexer(input_Stream)
 tokens = CommonTokenStream(lexer)
 tokens.fill()
 print(tokens)
