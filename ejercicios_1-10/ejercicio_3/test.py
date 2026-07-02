@@ -2,12 +2,12 @@
 #Numero de control 23030022
 
 from antlr4 import *
-from ExprLexer import ExprLexer
+from declaracionLexer import declaracionLexer
 import sys
 
 input_stream = FileStream(sys.argv[1])
 
-lexer = ExprLexer(input_stream)
+lexer = declaracionLexer(input_stream)
 tokens = CommonTokenStream(lexer)
 tokens.fill()
 print(tokens)
