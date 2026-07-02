@@ -3,9 +3,11 @@
 
 from antlr4 import *
 from ExprLexer import ExprLexer
+import sys
+input_stream = FileStream(sys.argv[1])
 
-Lexer = ExprLexer(InputStream(input("? ")))
-tokens = CommonTokenStream(Lexer)
+lexer = ExprLexer(input_stream)
+tokens = CommonTokenStream(lexer)
 tokens.fill()
 print(tokens)
 
@@ -13,6 +15,6 @@ for token in tokens.tokens:
     print("Texto : ", token.text)
     print("linea : ", token.line)
     print("columna : ", token.column)
-    nombre_token = Lexer.symbolicNames[token.type]
+    nombre_token = lexer.symbolicNames[token.type]
     print("tipo : ", nombre_token)
     print("----------------------")
